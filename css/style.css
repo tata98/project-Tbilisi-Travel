@@ -14,6 +14,9 @@
     font-family: Lato-regular;
     src: url(../fonts/Lato-Regular.ttf);
 }
+main{
+ overflow: hidden !important;
+}
 header{
     background-position: center;
     background-repeat: no-repeat;
@@ -65,7 +68,7 @@ header .contact-bar{
     z-index: -1;
     transform: skewX(-15deg);
 }
-.form-control{
+.form-control.srch{
     padding-right: 30px;
     box-shadow: none;
     width: 5px;
@@ -74,7 +77,7 @@ header .contact-bar{
     right: 0;
     transition: all .5s;
 }
-.form-control::placeholder, .form-control{
+.form-control.srch::placeholder, .form-control.srch{
     color: #091320!important; 
     font-family: Lato-bold !important;
 }
@@ -88,7 +91,7 @@ header .contact-bar{
     opacity: 1;
     transition: all .5s;
 }
-.form-control:focus, .form-control:hover{
+.form-control.srch:focus, .form-control.srch:hover{
     width: 250px;
     opacity: 1;
     box-shadow: none;
@@ -115,9 +118,9 @@ header .contact-bar{
 .carousel-inner .carousel-item img{
     height: 430px;
 }
-.carousel-title, .sect-title{
+.carousel-title, .card .card-body .sect-title{
     font-size: 24px;
-    font-size: Lato-black !important;
+    font-family: Lato-black !important;
 }
 .carousel-bg, footer{
    background-color: #24292e; 
@@ -196,7 +199,6 @@ header .contact-bar{
     font-size: 11px !important;
     font-family: Lato-regular !important;
 }
-
 hr{
     background-color: #e1ecfa;
     opacity: 1;
@@ -224,7 +226,65 @@ hr{
     font-family: Lato-regular !important;
 }
 
+.img-height{
+    height: 450px !important;
+}
+.about-inner h5{
+    font-size: 36px;
+    font-family: Lato-black !important;
+    color: #142a37;
+}
+.about-inner p{
+    font-size: 24px;
+    font-family: Lato-regular !important;
+    color: #142a37;
+}
+.pos-top{
+    background-position: top !important;
+} 
 
+.form-select.country, .form-select.city, .date-picker  {
+    width: 100%;
+    font-size: 16px;
+    font-family: Lato-black !important;
+    color: #091320;
+    box-shadow: none !important;
+    height: 60px;
+    
+}
+.form-select.country:focus, .form-select.city:focus,  .date-picker:focus{
+    border: 1px solid black;
+}
+.date-picker::placeholder{
+    font-size: 16px;
+    font-family: Lato-black !important;
+    color: #091320;
+}
+
+.search-btn{
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    font-family: Lato-black !important;
+    cursor: pointer;
+    background-color: #d31b13;
+    border: none;
+}
+
+.form-lbl{
+    font-size: 16px;
+    font-family: Lato-black !important;
+}
+.choose-data{
+    top: -80px;
+}
+
+
+@media (max-width: 1400px) {
+    .container{
+        max-width: 1200px !important;
+    }
+  }
 
 @media (max-width: 1124px) {
     .carousel .card-body{
@@ -238,7 +298,7 @@ hr{
     }
   }
 @media (max-width: 991px) {
-    .form-control{
+    .form-control.srch{
         width: 250px;
         opacity: 1;
         left: 0;
@@ -252,6 +312,10 @@ hr{
         padding-top: 5px !important;
         padding-bottom: 5px !important;
     }
+    .choose-data{
+    top: 0px;
+    padding: 20px 0;
+}
   }
   @media (max-width: 768px) {
        .list-group .first{
@@ -261,7 +325,7 @@ hr{
            text-align: center;
        }
        .copyright .cont{
-           flex-direction: column;
+           flex-direction: column !important;
        }
   }
 
@@ -272,5 +336,4 @@ hr{
 }
 
 
- 
 

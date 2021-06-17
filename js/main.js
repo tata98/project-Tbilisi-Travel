@@ -1,4 +1,6 @@
-var swiper = new Swiper(".mySwiper", {
+  AOS.init();
+  
+  var swiper = new Swiper(".mySwiper", {
   autoplay: {
     delay: 2000,
   },
@@ -23,3 +25,7 @@ var swiper = new Swiper(".mySwiper", {
       },
     },
   });
+
+
+
+
