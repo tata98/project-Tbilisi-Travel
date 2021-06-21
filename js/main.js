@@ -27,5 +27,17 @@
   });
 
 
+  $(function () {
+    $(".carousel-indicators .active ").click(function (e) { 
+      e.preventDefault();
+      $(".carousel-inner .carousel-item img").attr('src', $(this).attr("data-img"));
+    });
 
-
+    $(".add-info").click(function (e) { 
+      e.preventDefault();
+      $(".add-info.active").removeClass("active");
+      $(this).addClass("active");
+     
+    });
+    
+  });
