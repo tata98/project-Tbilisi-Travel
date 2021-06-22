@@ -331,7 +331,7 @@ hr{
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.096) 0%, rgb(0 0 0 / 76%) 33%, rgb(0 0 0) 100%);
     
 }
-.gallery .txt-gradient p, .gallery p, .details h5{
+.gallery .txt-gradient p, .gallery p, .details h5, .section-content{
     font-family: Lato-black !important;
     font-size: 24px;
     color: #1c293a;
@@ -359,7 +359,7 @@ hr{
     border-radius: 30px;
 }
 
-.contact-form input, .contact-form textarea, .contact-form input::placeholder, .add-info{
+.contact-form input, .contact-form textarea, .contact-form input::placeholder, .contact-form textarea::placeholder, .add-info{
     font-size: 16px !important;
     font-family: Lato-black !important;
 }
@@ -384,14 +384,29 @@ hr{
       background-color: #3b4353;
       padding: 12px 40px !important;
   }
-  .add-info:focus{
+  .add-info:focus, .accordion-button:focus{
       box-shadow:none
   }
    .add-info.active{
        background-color: #d31b13;
    }
- 
+   .accordion-button, .accordion-button:not(.collapsed){
+    background-color: #3b4353;
+    font-size: 16px !important;
+    font-family: Lato-black !important;
+   }
+   .accordion-button:not(.collapsed)::after,  .accordion-button::after  {
+       content: none;
+   }
+   .accordion-body{
+    font-size: 16px !important;
+    font-family: Lato-black !important;
+    color: #202734;
+   }
 
+   .show-section{
+       display: block !important;
+   }
 
 @media (max-width: 1400px) {
     .container{
